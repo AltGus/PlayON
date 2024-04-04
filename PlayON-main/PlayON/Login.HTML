@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja De Brinquedos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/CSS/estilo.css"> 
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PlayON</title>
+    </head>
+    <body>
+        <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="assets/Imagens/icons8-metamask-logo-64.png" alt="LOGO" width="64">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="Index.HTML">Início</a></li>
+                        <li><a href="Produtos.HTML">Produtos</a></li>
+                        <li><a href="Sobre.HTML">Sobre</a></li>
+                        <li><a href="Descontos.HTML">Descontos</a></li>
+                    </ul>
+                </nav>
+                </div>
+            </head>
+            <body>
+                <div id="content">
+                    <!-- Formulário de Login -->
+                    <form id="login-form">
+                        <h2>Login</h2>
+                        <input type="text" name="username" placeholder="Usuário" required>
+                        <input type="password" name="password" placeholder="Senha" required>
+                        <input type="submit" value="Entrar">
+                    </form>
+                    
+                    <!-- Formulário de Cadastro -->
+                    <form id="register-form">
+                        <h2>Cadastro</h2>
+                        <input type="text" name="new-username" placeholder="Novo Usuário" required>
+                        <input type="password" name="new-password" placeholder="Nova Senha" required>
+                        <input type="submit" value="Cadastrar">
+                    </form>
+                </div>
+            
+                <script>
+                    // Função para alternar entre o formulário de login e o de cadastro
+                    function toggleForms() {
+                        var loginForm = document.getElementById('login-form');
+                        var registerForm = document.getElementById('register-form');
+            
+                        if (loginForm.style.display === 'block') {
+                            loginForm.style.display = 'none';
+                            registerForm.style.display = 'block';
+                        } else {
+                            loginForm.style.display = 'block';
+                            registerForm.style.display = 'none';
+                        }
+                    }
+            
+                    // Evento de clique para alternar entre os formulários
+                    document.getElementById('login-form').addEventListener('submit', function(event) {
+                        event.preventDefault();
+                        // Coloque aqui a lógica de verificação do login
+                        alert('Você fez login!');
+                    });
+            
+                    document.getElementById('register-form').addEventListener('submit', function(event) {
+                        event.preventDefault();
+                        // Coloque aqui a lógica de cadastro
+                        alert('Cadastro realizado com sucesso!');
+                    });
+                </script>
+            </body>
+            </html>
